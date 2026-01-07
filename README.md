@@ -1,4 +1,4 @@
-# Project STARK
+# Project STARK (PROTOTYPE)
 
 this project is a real-time AI voice assistant built using LiveKit Agents and OpenAI. It connects to a LiveKit room, listens for user input, generates intelligent responses using OpenAI’s GPT-4o Realtime model, and converts those responses into spoken audio using text-to-speech. The assistant is designed for low-latency, interactive voice conversations and can be used in applications such as virtual assistants, voice-controlled systems, smart rooms, or experimental AI agents.
 
