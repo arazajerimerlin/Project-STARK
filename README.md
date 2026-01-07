@@ -1,8 +1,8 @@
 # Project STARK (PROTOTYPE)
 
-this project is a real-time AI voice assistant built using LiveKit Agents and OpenAI. It connects to a LiveKit room, listens for user input, generates intelligent responses using OpenAI’s GPT-4o Realtime model, and converts those responses into spoken audio using text-to-speech. The assistant is designed for low-latency, interactive voice conversations and can be used in applications such as virtual assistants, voice-controlled systems, smart rooms, or experimental AI agents.
+This project is a real-time AI voice assistant built using LiveKit Agents and Google Gemini Live. The assistant connects to a LiveKit room, listens for user input, generates intelligent responses using Google’s Gemini Realtime models, and speaks those responses back to users using native audio or text-to-speech. The system is designed for low-latency, conversational interactions and is suitable for use in virtual assistants, voice-controlled applications, smart environments, and experimental AI systems.
 
-The system separates language understanding (LLM) from speech output (TTS), ensuring stability and flexibility. OpenAI handles natural language generation, while LiveKit manages real-time audio streaming, noise cancellation, and room communication.
+By leveraging Gemini’s real-time bi-directional generation and LiveKit’s audio streaming infrastructure, the project enables natural, continuous voice conversations with noise cancellation and real-time response handling.
 
 # Requirements & Setup:
 
@@ -12,7 +12,7 @@ Python 3.10+
 
 LiveKit Agents SDK (Python)
 
-OpenAI API key (with access to gpt-4o-realtime-preview)
+Google Gemini API access (Realtime / Live API enabled)
 
 LiveKit server or LiveKit Cloud account
 
@@ -29,17 +29,17 @@ python-dotenv
 openai
 
 LiveKit plugins:
-livekit-plugins-openai
+livekit-plugins-google
 livekit-plugins-noise-cancellation
 
-# How It Works (High Level):
+# How It Works (High Level)
 
-The assistant joins a LiveKit room.
+1. The assistant joins a LiveKit room.
 
-User input is captured and processed in real time.
+2. User audio input is captured and processed in real time.
 
-OpenAI generates a text response using GPT-4o Realtime.
+3. Google Gemini Live generates responses using bi-directional streaming.
 
-The response text is converted into speech.
+4. Responses are delivered as speech or converted to audio.
 
-The spoken reply is streamed back into the LiveKit room.
+5. Audio is streamed back to users through LiveKit with noise cancellation.
